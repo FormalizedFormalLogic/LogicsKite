@@ -1,6 +1,6 @@
 # Kite of Modal Logic
 
-![Kite](https://sno2wman.github.io/ModalLogicKite/kite.png)
+![Kite](https://FormalizedFormalLogic.github.io/ModalLogicKite/kite.png)
 - solid line: `<ₛ`, proper weaker than
 - dotted line: `≤ₛ`, weaker than
 
