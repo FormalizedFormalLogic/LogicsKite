@@ -1,7 +1,6 @@
 digraph {
   graph[
-    rankdir = BT;
-    splines = line;
+    rankdir = BT; 
   ]
 
   node [
@@ -27,6 +26,8 @@ digraph {
   K4Loeb;
   K5;
   KB;
+  KB4;
+  KB5;
   KD;
   KDB;
   KT;
@@ -38,17 +39,20 @@ digraph {
   Triv;
    
   {rank = same; GL; K4Loeb; K4Henkin; K4H;}
-  GL -> K4Loeb [arrowhead = none];
-  K4Loeb -> K4Henkin [arrowhead = none];
-  K4Henkin -> K4H [arrowhead = none];
+  GL -> K4Loeb [color = "black:invis:black"];
+  K4Loeb -> K4Henkin [color = "black:invis:black"];
+  K4Henkin -> K4H [color = "black:invis:black"];
 
   {rank = same; K4; KB; K5; K4}
 
   {rank = same; S5; KT4B;}
-  S5 -> KT4B [arrowhead = none];
+  S5 -> KT4B [color = "black:invis:black"];
 
   {rank = same; S5Grz; Triv;}
-  S5Grz -> Triv [arrowhead = none];
+  S5Grz -> Triv [color = "black:invis:black"];
+
+  {rank = same; KB4; KB5;}
+  KB4 -> KB5 [color = "black:invis:black"];
 
   GL -> GLS [style = dashed];
   K -> K4
@@ -61,11 +65,16 @@ digraph {
   K4 -> S4
   K4 -> Triv [style = dashed];
   K5 -> K45
+  K45 -> KB4
+  KB5 -> S5
+  KTB -> S5
   KD -> KT
   KDB -> KTB 
   KT -> Grz [style = dashed];
   KT -> KTB
-  KT -> S4 [style = dashed];
+  KT -> S4;
   S4 -> S5
   S5 -> S5Grz [style = dashed] 
+  KD -> KDB
+  KB -> KDB
 } 
