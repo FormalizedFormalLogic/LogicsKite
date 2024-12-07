@@ -1,6 +1,7 @@
 digraph {
   graph[
     rankdir = BT;
+    splines = line;
   ]
 
   node [
@@ -15,51 +16,56 @@ digraph {
     arrowhead = none
   ];
 
-  K;
-  KD;
-  KT;
-  KB;
-  K4;
-  K5;
-  S4;
-  S5;
   GL;
-  Grz;
-  Triv;
   GLS;
-  S5Grz;
-  KT4B;
+  Grz;
+  K;
+  K4;
+  K45;
   K4H;
   K4Henkin;
   K4Loeb;
- 
-  GL -> GLS [style = dashed];
+  K5;
+  KB;
+  KD;
+  KDB;
+  KT;
+  KT4B;
+  KTB;
+  S4;
+  S5;
+  S5Grz;
+  Triv;
+   
+  {rank = same; GL; K4Loeb; K4Henkin; K4H;}
+  GL -> K4Loeb [arrowhead = none];
+  K4Loeb -> K4Henkin [arrowhead = none];
+  K4Henkin -> K4H [arrowhead = none];
 
+  {rank = same; K4; KB; K5; K4}
+
+  {rank = same; S5; KT4B;}
+  S5 -> KT4B [arrowhead = none];
+
+  {rank = same; S5Grz; Triv;}
+  S5Grz -> Triv [arrowhead = none];
+
+  GL -> GLS [style = dashed];
   K -> K4
   K -> K5
   K -> KB
   K -> KD
-  {rank = same; K4; KB; K5; K4}
-
   K4 -> GL 
   K4 -> Grz [style = dashed];
+  K4 -> K45
   K4 -> S4
   K4 -> Triv [style = dashed];
+  K5 -> K45
   KD -> KT
+  KDB -> KTB 
   KT -> Grz [style = dashed];
+  KT -> KTB
   KT -> S4 [style = dashed];
-  S4 -> S5 
-
-  GL -> K4Loeb [arrowhead = none];
-  K4Loeb -> K4Henkin [arrowhead = none];
-  K4Henkin -> K4H [arrowhead = none];
-  {rank = same; GL; K4Loeb; K4Henkin; K4H;}
-
-  S5 -> KT4B [arrowhead = none];
-  {rank = same; S5; KT4B;}
-
-  S5 -> S5Grz  
-
-  S5Grz -> Triv [arrowhead = none];
-  {rank = same; S5Grz; Triv;}
+  S4 -> S5
+  S5 -> S5Grz [style = dashed] 
 } 
