@@ -29,6 +29,9 @@ digraph {
   KB4;
   KB5;
   KD;
+  KD4;
+  KD45;
+  KD5;
   KDB;
   KT;
   KT4B;
@@ -62,19 +65,24 @@ digraph {
   K4 -> GL 
   K4 -> Grz [style = dashed];
   K4 -> K45
+  K4 -> KD4
   K4 -> S4
   K4 -> Triv [style = dashed];
-  K5 -> K45
   K45 -> KB4
+  K5 -> K45
+  K5 -> KD5
+  KB -> KDB
   KB5 -> S5
-  KTB -> S5
+  KD -> KDB
   KD -> KT
+  KD4 -> KD45
+  KD45 -> S5
+  KD5 -> KD45
   KDB -> KTB 
   KT -> Grz [style = dashed];
   KT -> KTB
   KT -> S4;
+  KTB -> S5
   S4 -> S5
   S5 -> S5Grz [style = dashed] 
-  KD -> KDB
-  KB -> KDB
 } 
