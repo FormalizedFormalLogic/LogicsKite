@@ -17,41 +17,38 @@ digraph {
    
   {rank = same; Triv; Ver;}
 
-  KTB -> S5;
-  S4 -> S5;
-  KD45 -> S5;
-  KB4 -> S5;
-  KT -> KTB;
-  KDB -> KTB;
-  KT -> S4;
-  KD4 -> S4;
-  KD4 -> KD45;
-  KD5 -> KD45;
-  K45 -> KD45;
-  K45 -> KB4;
-  KB -> KB4;
-  KD -> KT;
-  KD -> KDB;
-  KB -> KDB;
-  KD -> KD4;
-  KD -> KD5;
-  K5 -> KD5;
-  K4 -> K45;
-  K5 -> K45;
-  K -> KD;
+  Grz -> Triv;
   K -> K4;
   K -> K5;
   K -> KB;
-
+  K -> KD;
   K4 -> GL;
-  // S4 -> Triv;
+  K4 -> K45;
+  K45 -> KB4;
+  K45 -> KD45;
+  K5 -> K45;
+  K5 -> KD5;
+  KB -> KB4;
+  KB -> KDB;
+  KB4 -> S5;
+  KD -> KD4;
+  KD -> KD5;
+  KD -> KDB;
+  KD -> KT;
+  KD4 -> KD45;
+  KD4 -> S4;
+  KD45 -> S5;
+  KD5 -> KD45;
+  KDB -> KTB;
+  KT -> KTB;
+  KT -> S4;
+  KTB -> S5;
+  S4 -> Grz;
+  S4 -> S4Dot2; 
+  S4Dot2 -> S4Dot3;
+  S4Dot3 -> S5;
+  S5 -> Triv; 
 
-  S4 -> Grz [style = dashed];
-  S4 -> S4Dot2 [style = dashed];
-  S4Dot2 -> S4Dot3 [style = dashed];
-  S4Dot3 -> S5 [style = dashed];
-  Grz -> Triv [style = dashed];
-  S5 -> Triv [style = dashed]; 
   GL -> Ver [style = dashed];
   KB4 -> KTc [style = dashed];
   KTc -> Ver [style = dashed];
