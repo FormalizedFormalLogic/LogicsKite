@@ -1,5 +1,5 @@
-name = "modalLogicKite"
-defaultTargets = ["modalLogicKite"]
+name = "logic_kites"
+defaultTargets = ["kite_fo", "kite_modal"]
 
 [leanOptions]
 pp.unicode.fun = true
@@ -13,6 +13,11 @@ version = "git#master"
 name = "ModalLogicKite"
 
 [[lean_exe]]
-name = "kite"
-root = "Main" 
+name = "kite_fo"
+root = "FO" 
+supportInterpreter = true
+
+[[lean_exe]]
+name = "kite_modal"
+root = "Modal" 
 supportInterpreter = true
