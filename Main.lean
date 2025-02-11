@@ -4,12 +4,6 @@ namespace Main
 
 open Lean Qq LO FirstOrder Meta Kite
 
-def eq : Vertex q(SyntacticFormula ℒₒᵣ) := ⟨"EQ", q(Theory ℒₒᵣ), q(𝐄𝐐)⟩
-
-def r₀ : Vertex q(SyntacticFormula ℒₒᵣ) := ⟨"R₀", q(Theory ℒₒᵣ), q(𝐑₀)⟩
-
-def paminus : Vertex q(SyntacticFormula ℒₒᵣ) := ⟨"PA⁻", q(Theory ℒₒᵣ), q(𝐏𝐀⁻)⟩
-
 def dot : Vizualize.Dot (Vertex q(SyntacticFormula ℒₒᵣ)) EdgeType where
   settings :=
     r"graph[
@@ -27,7 +21,12 @@ def dot : Vizualize.Dot (Vertex q(SyntacticFormula ℒₒᵣ)) EdgeType where
       style = solid
       arrowhead = none
     ];"
-  vertices := [eq, r₀, paminus]
+  vertices := [
+    ⟨"EQ", q(Theory ℒₒᵣ), q(𝐄𝐐)⟩,
+    ⟨"R₀", q(Theory ℒₒᵣ), q(𝐑₀)⟩,
+    ⟨"PA⁻", q(Theory ℒₒᵣ), q(𝐏𝐀⁻)⟩,
+    ⟨"PA", q(Theory ℒₒᵣ), q(𝐏𝐀)⟩
+  ]
   edge := EdgeType.search
   vs v := v.name
   es e :=
