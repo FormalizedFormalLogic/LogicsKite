@@ -56,8 +56,6 @@ def Main.dot : Vizualize.Dot Vertex EdgeType where
     | .weaker => "[style = dashed]"
     | .strict => "[]"
 
-#eval Main.dot.toString
-
 open Lean
 open Lean.Meta
 
