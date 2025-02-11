@@ -47,4 +47,4 @@ def main : IO Unit := do
   searchPathRef.set compile_time_search_path%
   withImportModules #[Import.mk `ModalLogicKite false] {} 0 fun env => do
     let ⟨s, _, _⟩ ← dot.toString.toIO { fileName := "<compiler>", fileMap := default } { env := env }
-    IO.FS.writeFile ("test.dot") s
+    IO.FS.writeFile ("fo.dot") s

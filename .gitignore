@@ -5,3 +5,5 @@ _pages/
 *.tex
 *.olean
 /.lake
+
+*.dot

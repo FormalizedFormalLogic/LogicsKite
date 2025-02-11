@@ -13,6 +13,11 @@ version = "git#master"
 name = "ModalLogicKite"
 
 [[lean_exe]]
-name = "kite"
-root = "Main" 
+name = "kite_fo"
+root = "FO" 
+supportInterpreter = true
+
+[[lean_exe]]
+name = "kite_modal"
+root = "Modal" 
 supportInterpreter = true
