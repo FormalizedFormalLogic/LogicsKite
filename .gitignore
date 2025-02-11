@@ -3,3 +3,5 @@ _pages/
 *.pdf
 *.png
 *.tex
+*.olean
+/.lake
