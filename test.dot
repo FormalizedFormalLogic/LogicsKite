@@ -18,4 +18,6 @@ EQ -> R₀ [style = dashed];
 EQ -> PA⁻ [style = dashed];
 R₀ -> R₀ [style = dashed];
 PA⁻ -> PA⁻ [style = dashed];
+PA⁻ -> PA [style = dashed];
+PA -> PA [style = dashed];
 }
