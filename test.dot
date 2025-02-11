@@ -1,0 +1,21 @@
+digraph {
+graph[
+      rankdir = BT;
+    ]
+
+    node [
+      shape=plaintext
+      margin=0.05
+      width=0
+      height=0
+    ];
+
+    edge [
+      style = solid
+      arrowhead = none
+    ];EQ -> EQ [style = dashed];
+EQ -> R₀ [style = dashed];
+EQ -> PA⁻ [style = dashed];
+R₀ -> R₀ [style = dashed];
+PA⁻ -> PA⁻ [style = dashed];
+}
