@@ -1,3 +1,2 @@
--- This module serves as the root of the `ModalLogicKite` library.
--- Import modules here that should be built as part of the library.
-import «ModalLogicKite».Basic
+import ModalLogicKite.GenKite
+import ModalLogicKite.Dot
