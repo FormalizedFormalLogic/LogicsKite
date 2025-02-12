@@ -23,13 +23,18 @@ jobs:
     steps:
       - uses: actions/checkout@v4 
       - uses: ts-graphviz/setup-graphviz@v2
-      - name: Generate import graph
-        run: | 
-          dot -T png ./kite.dot -o kite.png
+      - uses: leanprover/lean-action@v1
+      - run: |
+          lake exec kite_fo 
+          dot -T png ./fo.dot -o fo.png
+      - run: | 
+          lake exec kite_modal
+          dot -T png ./modal.dot -o modal.png
       - name: Create page directory
         run: |
           mkdir _pages
-          mv ./kite.png ./_pages/kite.png
+          mv ./fo.png ./_pages/fo.png
+          mv ./modal.png ./_pages/modal.png
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _pages

@@ -1,0 +1,23 @@
+name = "logic_kites"
+defaultTargets = ["kite_fo", "kite_modal"]
+
+[leanOptions]
+pp.unicode.fun = true
+
+[[require]]
+name = "foundation"
+scope = "FormalizedFormalLogic"
+version = "git#master"
+
+[[lean_lib]]
+name = "ModalLogicKite"
+
+[[lean_exe]]
+name = "kite_fo"
+root = "FO" 
+supportInterpreter = true
+
+[[lean_exe]]
+name = "kite_modal"
+root = "Modal" 
+supportInterpreter = true

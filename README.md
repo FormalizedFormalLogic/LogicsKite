@@ -1,14 +1,15 @@
-# Kite of Modal Logic
+# Kites of Logics
 
-![Kite](https://FormalizedFormalLogic.github.io/ModalLogicKite/kite.png)
-- solid line at different height: `<ₛ`, proper weaker than
-- solid line at same height: `=ₛ`, equivalent
-- dotted line: `≤ₛ`, weaker than
+## Kites 
+
+## First-Order Theories
+
+![Kite of First-Order Theories](https://FormalizedFormalLogic.github.io/ModalLogicKite/modal.png)
+
+## Modal Logics
+
+![Kite of Modal Logics](https://FormalizedFormalLogic.github.io/ModalLogicKite/modal.png)
 
 ## Introduction
 
 Visualize of formalized result in https://github.com/FormalizedFormalLogic/Foundation.
-
-## Todo
-
-- **GENERATE AUTOMATICALLY**
