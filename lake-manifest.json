@@ -101,5 +101,5 @@
    "inputRev": "main",
    "inherited": true,
    "configFile": "lakefile.toml"}],
- "name": "modalLogicKite",
+ "name": "logics_kite",
  "lakeDir": ".lake"}

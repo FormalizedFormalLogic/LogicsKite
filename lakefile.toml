@@ -1,4 +1,4 @@
-name = "logic_kites"
+name = "logics_kite"
 defaultTargets = ["kite_fo", "kite_modal"]
 
 [leanOptions]
@@ -10,7 +10,7 @@ scope = "FormalizedFormalLogic"
 version = "git#master"
 
 [[lean_lib]]
-name = "ModalLogicKite"
+name = "LogicsKite"
 
 [[lean_exe]]
 name = "kite_fo"

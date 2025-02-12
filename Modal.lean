@@ -1,4 +1,4 @@
-import ModalLogicKite
+import LogicsKite
 
 open Lean Qq
 open LO.Modal
@@ -62,6 +62,6 @@ open Lean.Meta
 unsafe
 def main : IO Unit := do
   searchPathRef.set compile_time_search_path%
-  withImportModules #[Import.mk `ModalLogicKite false] {} 0 fun env => do
+  withImportModules #[Import.mk `LogicsKite false] {} 0 fun env => do
     let ⟨s, _, _⟩ ← Main.dot.toString.toIO { fileName := "<compiler>", fileMap := default } { env := env }
     IO.FS.writeFile ("modal.dot") s
