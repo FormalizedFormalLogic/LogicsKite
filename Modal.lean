@@ -7,24 +7,24 @@ open LO.Meta.Modal.Kite
 
 def Main.dot : Vizualize.Dot Vertex EdgeType where
   settings :=
-    r"graph[
-      rankdir = BT;
-    ]
+r"graph[
+  rankdir = BT;
+]
 
-    node [
-      shape=plaintext
-      margin=0.05
-      width=0
-      height=0
-    ];
+node [
+  shape=plaintext
+  margin=0.05
+  width=0
+  height=0
+];
 
-    edge [
-      style = solid
-      arrowhead = none
-    ];
+edge [
+  style = solid
+  arrowhead = none
+];
 
-    {rank = same; Triv; Ver;}
-    "
+{rank = same; Triv; Ver;}
+"
   vertices := [
     ⟨"GL", q(Logic.GL)⟩,
     ⟨"Grz", q(Logic.Grz)⟩,
@@ -43,18 +43,18 @@ def Main.dot : Vizualize.Dot Vertex EdgeType where
     ⟨"KT", q(Logic.KT)⟩,
     ⟨"KTB", q(Logic.KTB)⟩,
     ⟨"S4", q(Logic.S4)⟩,
-    ⟨"S4Dot2", q(Logic.S4Dot2)⟩,
-    ⟨"S4Dot3", q(Logic.S4Dot3)⟩,
+    ⟨"S4.2", q(Logic.S4Dot2)⟩,
+    ⟨"S4.3", q(Logic.S4Dot3)⟩,
     ⟨"S5", q(Logic.S5)⟩,
     ⟨"Triv", q(Logic.Triv)⟩,
     ⟨"Ver", q(Logic.Ver)⟩,
   ]
   edge := EdgeType.search
-  vs v := v.name
+  vs v := s!"\"{v.name}\""
   es e :=
     match e with
-    | .weaker => "[style = dashed]"
-    | .strict => "[]"
+    | .weaker => #["style = dashed"]
+    | .strict => #[]
 
 open Lean
 open Lean.Meta
