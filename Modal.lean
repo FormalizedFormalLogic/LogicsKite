@@ -26,6 +26,7 @@ edge [
 {rank = same; Triv; Ver;}
 "
   vertices := [
+    ⟨"Empty", q(Logic.Empty)⟩,
     ⟨"GL", q(Logic.GL)⟩,
     ⟨"Grz", q(Logic.Grz)⟩,
     ⟨"K", q(Logic.K)⟩,
@@ -48,6 +49,7 @@ edge [
     ⟨"S4", q(Logic.S4)⟩,
     ⟨"S5", q(Logic.S5)⟩,
     ⟨"Triv", q(Logic.Triv)⟩,
+    ⟨"Univ", q(Logic.Univ)⟩,
     ⟨"Ver", q(Logic.Ver)⟩,
   ]
   edge := EdgeType.search
