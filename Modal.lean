@@ -44,6 +44,7 @@ edge [
     ⟨"KH", q(Logic.KH)⟩,
     ⟨"KT", q(Logic.KT)⟩,
     ⟨"KTB", q(Logic.KTB)⟩,
+    ⟨"KTc", q(Logic.KTc)⟩,
     ⟨"S4.2", q(Logic.S4Dot2)⟩,
     ⟨"S4.3", q(Logic.S4Dot3)⟩,
     ⟨"S4", q(Logic.S4)⟩,
