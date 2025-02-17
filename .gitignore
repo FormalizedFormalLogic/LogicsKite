@@ -1,9 +1,11 @@
 _pages/
 
-*.pdf
-*.png
-*.tex
 *.olean
 /.lake
 
 *.dot
+*.png
+*.svg
+*.pdf
+*.tex
+*.json
