@@ -22,6 +22,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4 
+      - uses: typst-community/setup-typst@v4
       - uses: ts-graphviz/setup-graphviz@v2
       - uses: leanprover/lean-action@v1
       - run: |
@@ -29,7 +30,7 @@ jobs:
           dot -T png ./fo.dot -o fo.png
       - run: | 
           lake exec kite_modal
-          dot -T png ./modal.dot -o modal.png
+          typst compile ./modal.typ ./modal.png
       - name: Create page directory
         run: |
           mkdir _pages
