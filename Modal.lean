@@ -51,4 +51,4 @@ def main : IO Unit := do
   searchPathRef.set compile_time_search_path%
   withImportModules #[Import.mk `LogicsKite false] {} 0 fun env => do
     let ⟨s, _, _⟩ ← Main.kite.toString.toIO { fileName := "<compiler>", fileMap := default } { env := env }
-    IO.FS.writeFile ("modal.json") s
+    IO.FS.writeFile ("Modal.json") s

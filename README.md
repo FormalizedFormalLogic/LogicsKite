@@ -4,18 +4,18 @@
 
 ## Modal Logics
 
-![Kite of Modal Logics](https://FormalizedFormalLogic.github.io/LogicsKite/modal.png)
+![Kite of Modal Logics](https://FormalizedFormalLogic.github.io/LogicsKite/Modal.png)
 
 ```
-lake exe kite_modal
+lake exe KiteModal
 ```
 
-## First-Order Theories
+## First-Order Arithmetics
 
-![Kite of First-Order Theories](https://FormalizedFormalLogic.github.io/LogicsKite/FO.png)
+![Kite of First-Order Arithmetics](https://FormalizedFormalLogic.github.io/LogicsKite/Arith.png)
 
 ```
-lake exe kite_fo
+lake exe KiteArith
 ```
 
 ## Introduction

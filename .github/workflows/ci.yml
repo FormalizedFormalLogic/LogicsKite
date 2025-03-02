@@ -26,16 +26,16 @@ jobs:
       - uses: ts-graphviz/setup-graphviz@v2
       - uses: leanprover/lean-action@v1
       - run: |
-          lake exec kite_fo
-          typst compile ./FO.typ ./FO.png
+          lake exec KiteArith
+          typst compile ./Arith.typ ./Arith.png
       - run: | 
-          lake exec kite_modal
-          typst compile ./modal.typ ./modal.png
+          lake exec KiteModal
+          typst compile ./Modal.typ ./Modal.png
       - name: Create page directory
         run: |
           mkdir _pages
-          mv ./FO.png ./_pages/FO.png
-          mv ./modal.png ./_pages/modal.png
+          mv ./Arith.png ./_pages/Arith.png
+          mv ./Modal.png ./_pages/Modal.png
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _pages

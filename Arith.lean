@@ -3,7 +3,7 @@ import LogicsKite
 open Lean Qq
 open LO.FirstOrder
 open LO.Meta
-open LO.Meta.Kite.FO
+open LO.Meta.Kite.Arith
 
 def Main.kite : Kite.Generator (Vertex q(SyntacticFormula ℒₒᵣ)) EdgeType where
   vertices := [
@@ -29,4 +29,4 @@ def main : IO Unit := do
   searchPathRef.set compile_time_search_path%
   withImportModules #[Import.mk `LogicsKite false] {} 0 fun env => do
     let ⟨s, _, _⟩ ← Main.kite.toString.toIO { fileName := "<compiler>", fileMap := default } { env := env }
-    IO.FS.writeFile ("FO.json") s
+    IO.FS.writeFile ("Arith.json") s

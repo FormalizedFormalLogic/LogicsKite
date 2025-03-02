@@ -5,7 +5,7 @@
 
 #let Theory(T) = $upright(bold(#T))$
 
-#let arrows = json("./FO.json").map(((from, to, type)) => {
+#let arrows = json("./Arith.json").map(((from, to, type)) => {
   if type == "strict" {
     return strfmt("\"{}\" -> \"{}\"", from, to)
   } else if type == "weaker" {
@@ -20,7 +20,7 @@ Kite of First-Order Arithmetics
 #raw-render(
   raw(
     "
-  digraph modal_logic_kite {
+  digraph ArithmeticsKite {
     rankdir = BT;
 
     node [

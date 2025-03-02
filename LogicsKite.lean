@@ -1,3 +1,3 @@
 import LogicsKite.Generator
 import LogicsKite.Modal
-import LogicsKite.FO
+import LogicsKite.Arith
