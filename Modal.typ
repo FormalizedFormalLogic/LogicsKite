@@ -96,3 +96,5 @@ Kite of Modal Logics
   ),
   width: 480pt,
 )
+
+Build on #datetime.today().year()/#datetime.today().month()/#datetime.today().day()

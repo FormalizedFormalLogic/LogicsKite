@@ -48,3 +48,5 @@ Kite of First-Order Arithmetics
   ),
   width: 240pt,
 )
+
+Build on #datetime.today().year()/#datetime.today().month()/#datetime.today().day()
