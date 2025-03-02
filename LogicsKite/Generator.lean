@@ -3,15 +3,15 @@ import Lean.Data.Json
 
 open Lean Meta
 
-namespace LO.Meta.Vizualize
+namespace LO.Meta.Kite
 
-structure Kite (V : Type*) (E : Type) where
+structure Generator (V : Type*) (E : Type) where
   vertices : List V
   search : V → V → MetaM (Option E)
   vs : V → String
   es : E → String
 
-protected def Kite.toJson (d : Kite V E) : MetaM Json := do
+protected def Generator.toJson (d : Generator V E) : MetaM Json := do
   let l : List Json ← (d.vertices.product d.vertices).filterMapM fun ⟨a, b⟩ ↦ do
     let o ← d.search a b
     match o with
@@ -25,8 +25,8 @@ protected def Kite.toJson (d : Kite V E) : MetaM Json := do
       return none
   return Json.arr l.toArray
 
-protected def Kite.toString (d : Kite V E) : MetaM String := do
+protected def Generator.toString (d : Generator V E) : MetaM String := do
   let j ← d.toJson
   return j.pretty
 
-end LO.Meta.Vizualize
+end LO.Meta.Kite

@@ -3,9 +3,9 @@ import LogicsKite
 open Lean Qq
 open LO.Modal
 open LO.Meta
-open LO.Meta.Modal.Kite
+open LO.Meta.Kite.Modal
 
-def Main.kite : Vizualize.Kite Vertex EdgeType where
+def Main.kite : Kite.Generator Vertex EdgeType where
   vertices := [
     ⟨q(Logic.Empty)⟩,
     ⟨q(Logic.GL)⟩,
