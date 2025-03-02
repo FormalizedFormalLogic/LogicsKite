@@ -3,9 +3,9 @@ import LogicsKite
 open Lean Qq
 open LO.Modal
 open LO.Meta
-open LO.Meta.Modal.Kite
+open LO.Meta.Kite.Modal
 
-def Main.kite : Vizualize.Kite Vertex EdgeType where
+def Main.kite : Kite.Generator Vertex EdgeType where
   vertices := [
     ⟨q(Logic.Empty)⟩,
     ⟨q(Logic.GL)⟩,
@@ -51,4 +51,4 @@ def main : IO Unit := do
   searchPathRef.set compile_time_search_path%
   withImportModules #[Import.mk `LogicsKite false] {} 0 fun env => do
     let ⟨s, _, _⟩ ← Main.kite.toString.toIO { fileName := "<compiler>", fileMap := default } { env := env }
-    IO.FS.writeFile ("modal.json") s
+    IO.FS.writeFile ("Modal.json") s

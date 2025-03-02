@@ -1,8 +1,8 @@
-import Foundation.Logic.Entailment
+import Foundation
 
-namespace LO.Meta
+namespace LO.Meta.Kite
 
-namespace Kite
+namespace Arith
 
 open Lean Qq
 
@@ -28,6 +28,6 @@ def EdgeType.search {F : Q(Type)} (s t : Vertex F) : MetaM (Option EdgeType) := 
   | .some e,   .none => return .some <| .weaker <| toString e
   |       _, .some e => return .some <| .strict <| toString e
 
-end Kite
+end Arith
 
-end LO.Meta
+end LO.Meta.Kite

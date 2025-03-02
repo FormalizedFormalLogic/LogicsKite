@@ -1,6 +1,3 @@
-import LogicsKite.GenKite
-import LogicsKite.Dot
-import LogicsKite.Json
-
+import LogicsKite.Generator
 import LogicsKite.Modal
-import LogicsKite.FO
+import LogicsKite.Arith

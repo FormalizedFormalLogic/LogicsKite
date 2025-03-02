@@ -1,8 +1,8 @@
 import Foundation
 
-namespace LO.Meta.Modal
+namespace LO.Meta.Kite
 
-namespace Kite
+namespace Modal
 
 open Lean Qq
 open LO.Modal (Logic)
@@ -25,6 +25,6 @@ def EdgeType.search (s t : Vertex) : MetaM (Option EdgeType) := do
   | .some _,   .none => return .some .weaker
   |       _, .some _ => return .some .strict
 
-end Kite
+end Modal
 
-end LO.Meta.Modal
+end LO.Meta.Kite

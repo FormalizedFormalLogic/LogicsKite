@@ -6,9 +6,11 @@
 #let Logic(L) = $upright(bold(#L))$
 #let Axiom(A) = $upright(sans(#A))$
 
-#let arrows = json("./modal.json").map(((from, to, type)) => {
+#let arrows = json("./Modal.json").map(((from, to, type)) => {
   if type == "strict" {
     return strfmt("\"{}\" -> \"{}\"", from, to)
+  } else if type == "weaker" {
+    return strfmt("\"{}\" -> \"{}\" [style=dashed] ", from, to)
   } else if type == "sorry" {
     return strfmt("\"{}\" -> \"{}\" [color=red; style=dashed] ", from, to)
   }
@@ -19,7 +21,7 @@ Kite of Modal Logics
 #raw-render(
   raw(
     "
-  digraph modal_logic_kite {
+  digraph ModalLogicsKite {
     rankdir = BT;
 
     node [
