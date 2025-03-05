@@ -10,10 +10,19 @@ open LO.Modal (Logic)
 structure Vertex where
   thy : Q(Logic)
 
+instance : ToString Vertex where
+  toString v := s!"{v.thy}"
+
 inductive EdgeType where
   | weaker
   | strict
-  deriving ToExpr
+deriving ToExpr, DecidableEq
+
+def EdgeType.prefer : EdgeType → EdgeType → EdgeType
+  | .strict, .strict => .strict
+  | _, _ => .weaker
+
+instance : Inhabited EdgeType := ⟨.weaker⟩
 
 def EdgeType.search (s t : Vertex) : MetaM (Option EdgeType) := do
   let ⟨L₁⟩ := s
