@@ -21,7 +21,7 @@ Kite of First-Order Arithmetics
   raw(
     "
   digraph ArithmeticsKite {
-    rankdir = BT;
+    rankdir = LR;
 
     node [
       shape=none
@@ -46,7 +46,7 @@ Kite of First-Order Arithmetics
     "PA": $Theory("PA")$,
     "TA": $Theory("TA")$,
   ),
-  width: 240pt,
+  width: 360pt,
 )
 
 Build on #datetime.today().year()/#datetime.today().month()/#datetime.today().day()

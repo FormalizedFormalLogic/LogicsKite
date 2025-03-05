@@ -5,7 +5,7 @@
    "type": "git",
    "subDir": null,
    "scope": "FormalizedFormalLogic",
-   "rev": "72be6b0e84d0bf428c1fd674b2880a9a4579a197",
+   "rev": "28ad5991dbc04c585e09749cb50e4932fd1d196e",
    "name": "foundation",
    "manifestFile": "lake-manifest.json",
    "inputRev": "master",
