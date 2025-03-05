@@ -5,7 +5,7 @@ open LO.Modal
 open LO.Meta
 open LO.Meta.Kite.Modal
 
-def Main.kite : Kite.Generator Vertex EdgeType where
+def Main.kite : Kite Vertex EdgeType where
   vertices := [
     ⟨q(Logic.Empty)⟩,
     ⟨q(Logic.GL)⟩,
@@ -42,6 +42,7 @@ def Main.kite : Kite.Generator Vertex EdgeType where
     match e with
     | .weaker => "weaker"
     | .strict => "strict"
+  prefer := EdgeType.prefer
 
 open Lean
 open Lean.Meta
@@ -50,5 +51,5 @@ unsafe
 def main : IO Unit := do
   searchPathRef.set compile_time_search_path%
   withImportModules #[Import.mk `LogicsKite false] {} 0 fun env => do
-    let ⟨s, _, _⟩ ← Main.kite.toString.toIO { fileName := "<compiler>", fileMap := default } { env := env }
+    let ⟨s, _, _⟩ ← Main.kite.toStringM.toIO { fileName := "<compiler>", fileMap := default } { env := env }
     IO.FS.writeFile ("Modal.json") s

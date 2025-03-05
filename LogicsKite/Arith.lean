@@ -11,10 +11,23 @@ structure Vertex (F : Q(Type)) where
   Entailment : Q(Type)
   thy : Q($Entailment)
 
+instance : ToString (Vertex F) where
+  toString v := s!"{v.name}"
+
 inductive EdgeType where
-  | weaker (s : String)
-  | strict (s : String)
-  deriving ToExpr
+  | weaker
+  | strict
+deriving ToExpr, DecidableEq
+
+def EdgeType.prefer : EdgeType → EdgeType → EdgeType
+  | .strict, .strict => .strict
+  | _, _ => .weaker
+
+instance : Inhabited EdgeType := ⟨.weaker⟩
+instance : ToString EdgeType where
+  toString
+    | .weaker => "weaker"
+    | .strict => "strict"
 
 def EdgeType.search {F : Q(Type)} (s t : Vertex F) : MetaM (Option EdgeType) := do
   let ⟨_, S, 𝓢⟩ := s
@@ -25,8 +38,8 @@ def EdgeType.search {F : Q(Type)} (s t : Vertex F) : MetaM (Option EdgeType) := 
   let s ← Meta.synthInstance? q(Entailment.StrictlyWeakerThan $𝓢 $𝓣)
   match w, s with
   |   .none,   .none => return .none
-  | .some e,   .none => return .some <| .weaker <| toString e
-  |       _, .some e => return .some <| .strict <| toString e
+  | .some _,   .none => return .some <| .weaker
+  |       _, .some _ => return .some <| .strict
 
 end Arith
 
