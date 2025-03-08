@@ -1,7 +1,9 @@
+**Archived: This repository is integrated into [Foundation](https://github.com/FormalizedFormalLogic/Foundation) now.**
+
 # Kites of Logics
 
 Visualization for sublogic/subtheory relations of modal logics/first-order arithmetics in https://github.com/FormalizedFormalLogic/Foundation.
- 
+
 ## Modal Logics
 
 ![Kite of Modal Logics](https://FormalizedFormalLogic.github.io/LogicsKite/Modal.png)
@@ -16,4 +18,4 @@ lake exe KiteModal
 
 ```
 lake exe KiteArith
-``` 
+```
